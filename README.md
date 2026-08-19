@@ -18,8 +18,6 @@
 
 [🚀 Quick Start](#quick-start) • [📥 Installation](#installation) • [🔑 API Key](#getting-api-key) • [🎮 Usage](#usage) • [🤖 Models](#available-models) • [🛠️ Troubleshooting](#troubleshooting) • [❓ FAQ](#faq) • [📈 Changelog](#changelog)
 
-🌍 **Language:** 🇬🇧 English | 🇷🇺 [Русский (быстрый старт)](#ru-quickstart)
-
 </div>
 
 ---
@@ -62,24 +60,6 @@ Get the assistant running in **under 2 minutes**:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/romokaso/Gemeni-AI/main/Gemini-AI"))()
 ```
-
-<a id="ru-quickstart"></a>
-
-<details>
-<summary>🇷🇺 <b>Русский: быстрый старт за 3 шага</b></summary>
-
-1. **Получите бесплатный API-ключ** — откройте <https://aistudio.google.com/apikey>, войдите в Google-аккаунт и нажмите **«Create API key»** (ключ начинается с `AIza...`).
-2. **Запустите скрипт** в своём экзекуторе (вставьте код ниже и нажмите Execute):
-
-   ```lua
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/romokaso/Gemeni-AI/main/Gemini-AI"))()
-   ```
-
-3. **Вставьте ключ** в появившееся окно и нажмите **Confirm** — ключ сохранится автоматически, и можно общаться!
-
-> 💡 Полная инструкция по установке — ниже в разделе [📥 Installation](#installation), а как получить ключ — в разделе [🔑 Getting API Key](#getting-api-key).
-
-</details>
 
 <p align="right"><sub><a href="#top">⬆ Back to top</a></sub></p>
 
