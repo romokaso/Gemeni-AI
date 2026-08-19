@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Gemini AI Assistant for Roblox">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a1c"/>
+      <stop offset="0.55" stop-color="#131334"/>
+      <stop offset="1" stop-color="#1d1d4d"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b9bff"/>
+      <stop offset="1" stop-color="#2f6fe0"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9d1ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4285F4" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#4285F4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <circle cx="90" cy="40" r="170" fill="url(#glow)"/>
+  <circle cx="1150" cy="280" r="210" fill="url(#glow)"/>
+  <circle cx="1110" cy="30" r="90" fill="url(#glow)"/>
+
+  <g fill="#8ab4ff" opacity="0.85">
+    <path transform="translate(1020,58) scale(1.1)" d="M0,-7 L1.8,-1.8 L7,0 L1.8,1.8 L0,7 L-1.8,1.8 L-7,0 L-1.8,-1.8 Z"/>
+    <path transform="translate(1085,120) scale(0.7)" d="M0,-7 L1.8,-1.8 L7,0 L1.8,1.8 L0,7 L-1.8,1.8 L-7,0 L-1.8,-1.8 Z"/>
+    <path transform="translate(955,140) scale(0.55)" d="M0,-7 L1.8,-1.8 L7,0 L1.8,1.8 L0,7 L-1.8,1.8 L-7,0 L-1.8,-1.8 Z"/>
+    <path transform="translate(1130,215) scale(0.8)" d="M0,-7 L1.8,-1.8 L7,0 L1.8,1.8 L0,7 L-1.8,1.8 L-7,0 L-1.8,-1.8 Z"/>
+    <circle cx="1040" cy="95" r="3"/>
+    <circle cx="1120" cy="75" r="2.2"/>
+    <circle cx="965" cy="70" r="2.4"/>
+  </g>
+
+  <g transform="translate(80,104)">
+    <rect width="136" height="96" rx="26" fill="url(#acc)"/>
+    <path d="M34 96 L42 122 L70 100 Z" fill="url(#acc)"/>
+    <circle cx="38" cy="48" r="9" fill="#ffffff" opacity="0.95"/>
+    <circle cx="68" cy="48" r="9" fill="#ffffff" opacity="0.7"/>
+    <circle cx="98" cy="48" r="9" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <text x="252" y="122" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="url(#title)">Gemini AI Assistant</text>
+  <text x="254" y="166" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="25" font-weight="600" fill="#a8c7fa">for Roblox</text>
+  <text x="254" y="200" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="16.5" fill="#c9d6f5">AI chat assistant with full Google Gemini API integration</text>
+
+  <g font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="13.5" font-weight="600">
+    <rect x="252" y="222" width="132" height="32" rx="16" fill="#4285F4"/>
+    <text x="318" y="239" fill="#ffffff" text-anchor="middle" dominant-baseline="central">23 Gemini Models</text>
+    <rect x="398" y="222" width="126" height="32" rx="16" fill="none" stroke="#4285F4" stroke-width="1.5"/>
+    <text x="461" y="239" fill="#a8c7fa" text-anchor="middle" dominant-baseline="central">10 Languages</text>
+    <rect x="538" y="222" width="138" height="32" rx="16" fill="none" stroke="#4285F4" stroke-width="1.5"/>
+    <text x="607" y="239" fill="#a8c7fa" text-anchor="middle" dominant-baseline="central">Chat History</text>
+    <rect x="690" y="222" width="118" height="32" rx="16" fill="none" stroke="#4285F4" stroke-width="1.5"/>
+    <text x="749" y="239" fill="#a8c7fa" text-anchor="middle" dominant-baseline="central">Free &amp; Fast</text>
+  </g>
+
+  <text x="1180" y="286" text-anchor="end" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="13" fill="#6f7fae">by romokaso</text>
+</svg>
