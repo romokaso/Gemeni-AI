@@ -23,9 +23,19 @@ Gemini AI Assistant for Roblox
 
 ](https://ai.google.dev/)
 
-**Powerful AI Assistant for Roblox with full Google Gemini API integration**
+<div align="center">
 
-[📥 Installation](#-installation) • [🎮 Usage](#-usage) • [✨ Features](#-features) • [🔑 API Key](#-getting-api-key)
+# ⛔ DISCONNECTED
+
+### The Gemini AI Assistant has been **fully disabled and removed** from this repository.
+
+The `Gemini-AI` file no longer contains the assistant. It now plays a single
+cinematic **"DISCONNECTED"** overlay in Roblox and then folds into a small idle
+status badge. No API, no keys, no chat, no code execution.
+
+[⛔ Current status](#-current-status--disconnected) • [🎬 What the script does now](#-what-the-script-does-now) • [🧾 Legacy documentation](#-legacy-documentation)
+
+</div>
 
 
 
@@ -39,6 +49,17 @@ Gemini AI Assistant for Roblox
 
 ## 📋 Table of Contents
 
+**Current script**
+
+- [⛔ Current Status — DISCONNECTED](#-current-status--disconnected)
+- [🎬 What the script does now](#-what-the-script-does-now)
+- [⚙️ Configuration](#️-configuration)
+- [🖥️ Requirements](#️-requirements)
+- [🧾 Legacy Documentation](#-legacy-documentation)
+
+<details>
+<summary><b>Legacy assistant docs</b> — features, installation, usage (kept for history, no longer functional)</summary>
+
 - [✨ Features](#-features)
 - [📥 Installation](#-installation)
 - [🔑 Getting API Key](#-getting-api-key)
@@ -48,10 +69,110 @@ Gemini AI Assistant for Roblox
 - [⚙️ Requirements](#️-system-requirements)
 - [🔧 Troubleshooting](#-troubleshooting)
 - [📸 Screenshots](#-screenshots)
+
+</details>
+
+**Repository**
+
 - [🤝 Contributing](#-contributing)
 - [📝 License](#-license)
 
 ---
+
+---
+
+## ⛔ Current Status — DISCONNECTED
+
+<table>
+<tr>
+<td width="50%">
+
+### ❌ Removed forever
+
+- **All HTTP traffic** to `generativelanguage.googleapis.com`
+- **API key input**, validation and the multi-key manager
+- **`readfile` / `writefile`** persistence (`GeminiAI_Data.json`)
+- **`loadstring()`** execution of AI generated code
+- **Clipboard access**, the `RightControl` hotkey
+- Chat UI, chat history, settings, themes, translations, sounds
+
+</td>
+<td width="50%">
+
+### ✅ What is left
+
+- A pure client-side **animation** (a `ScreenGui` and tweens)
+- No network, no files, no execution, no input hooks
+- No game modification of any kind
+- Optional cleanup of what the old script left behind
+
+</td>
+</tr>
+</table>
+
+> ### 🔐 Security note
+> The old assistant stored Gemini API keys **in plain text** in `GeminiAI_Data.json`
+> inside your executor workspace. This version deletes that file on launch, but the
+> keys may already have been exposed — **revoke them manually** at
+> [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+
+---
+
+## 🎬 What the script does now
+
+Running the file plays a one-shot shutdown cinematic (~12 s) and then leaves a
+compact idle badge at the bottom of the screen:
+
+| # | Moment | What happens |
+|---|--------|--------------|
+| 1 | `0.0 s` | Backdrop, vignette and 42 drifting light motes fade in, card pops in with a back-eased scale |
+| 2 | `0.4 s` | **SYSTEM NOTICE** header, breathing halo behind the power symbol |
+| 3 | `0.8 s` | `DISCONNECTED` title — each letter scrambles through random glyphs, then locks in |
+| 4 | `1.5 s` | Subtitle typewriter: *"Gemini AI Assistant has been fully disabled."* |
+| 5 | `2.6 s` | Divider grows from the centre, status rows slide in |
+| 6 | `3.0 s` | Each subsystem scans amber, then locks to red **OFFLINE**: network bridge · Gemini API · local storage · code execution · input hooks |
+| 7 | `4.6 s` | **Power cut** — the whole accent palette flips from indigo to red, the icon dips, the card shakes, RGB-split glitch on the title |
+| 8 | `5.0 s` | Progress bar fills to 100 % with a live counter, then reads **SESSION TERMINATED** |
+| 9 | `9.2 s` | The cinematic collapses; a pill badge fades in: `DISCONNECTED · gemini ai · offline` |
+| 10 | idle | Comet chase around the mini power symbol, breathing glow, periodic shine sweep and glitch flicker |
+
+The dot-ring power symbol, the comet chase, the dust field and every pulse are
+driven by a **single `RenderStepped` loop**; tweens only handle the choreography.
+
+### ⚙️ Configuration
+
+All knobs live in the `CONFIG` table at the top of the file:
+
+```lua
+local CONFIG = {
+    destroyLegacyGui  = true,   -- remove any leftover "GeminiAIGui" ScreenGui
+    purgeLegacyData   = true,   -- delete "GeminiAI_Data.json" (plain-text API keys)
+    keepBadge         = true,   -- stay on screen as a compact badge after the intro
+    badgeBottomOffset = 96,     -- px from the bottom edge of the viewport
+    introSpeed        = 1.0,    -- 1.0 = normal, 1.5 = faster, 0.5 = slower
+    particles         = 42,     -- floating dust motes
+    ringDots          = 26,     -- dots forming the power-symbol arc
+    glitchy           = true,   -- occasional RGB-split glitch on the title
+}
+```
+
+Set `keepBadge = false` and the overlay destroys itself right after the cinematic.
+
+### 🖥️ Requirements
+
+Nothing special — plain Roblox client API only (`Instance`, `TweenService`,
+`RunService`, `UIScale`, `UIGradient`, `UIStroke`, `UICorner`). Executor
+functions are used **only if they exist**: `gethui()` for a cleaner parent and
+`delfile()` for the legacy key file. It also runs as an ordinary `LocalScript`.
+
+---
+
+## 🧾 Legacy Documentation
+
+> ⚠️ Everything below this line describes the **old AI assistant**, which has
+> been deleted from the script. It is kept for historical reference only —
+> none of these features work anymore, and the installation snippets below
+> will only show the DISCONNECTED overlay.
 
 ## ✨ Features
 
@@ -103,6 +224,9 @@ Gemini AI Assistant for Roblox
 ## 📥 Installation
 
 ### 🚀 Method 1: Loadstring (Recommended)
+
+> ⚠️ **Legacy.** Running this today only plays the DISCONNECTED overlay — there is
+> no assistant behind it anymore.
 
 Copy and execute in any Roblox Executor:
 
